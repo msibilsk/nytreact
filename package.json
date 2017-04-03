@@ -1,0 +1,37 @@
+{
+  "name": "nyt-scraper-react",
+  "version": "1.0.0",
+  "description": "React based app that scrapes NYT articles and allows user to save and comment on them.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msibilsk/nyt-scraper-react.git"
+  },
+  "author": "Mary Sibilsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msibilsk/nyt-scraper-react/issues"
+  },
+  "homepage": "https://github.com/msibilsk/nyt-scraper-react#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.2",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
