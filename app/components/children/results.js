@@ -10,7 +10,7 @@ class Results extends Component	{
 
 	showResults(){
 		if(this.props.res){
-			return this.props.res.map((x, i) => <SearchResult key={i} title={x.headline.main} p={x.lead_paragraph} link={x.web_url} saved={false}/>);
+			return this.props.res.map((x, i) => <SearchResult key={i} title={x.headline.main} lead_p={x.lead_paragraph} link={x.web_url}/>);
 		}
 		return "Search results will be displayed here."
 	}

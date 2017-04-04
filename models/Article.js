@@ -12,15 +12,17 @@ var ArticleSchema = new Schema({
     unique: true
   },
   // link is a required string
+  lead_p: {
+    type: String,
+    required: false,
+  },
+
   link: {
     type: String,
     required: true
   },
   date: String,
-  saved: {
-    type: Boolean,
-    default: false
-  },
+
   // This only saves one note's ObjectId, ref refers to the Note model
   note: {
     type: Schema.Types.ObjectId,

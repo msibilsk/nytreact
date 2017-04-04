@@ -18,7 +18,6 @@ class Main extends Component {
 	componentDidUpdate() {
 		if(!this.state.res){
 			helpers.fetchData(this.state.query, this.state.startDate, this.state.endDate).then(function(data){
-				console.log(data);
 				this.setState({res: data});
 			}.bind(this));
 		}

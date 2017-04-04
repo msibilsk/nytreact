@@ -22,7 +22,7 @@ var app = express();
 //body-parser boilerplate
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(bodyParser.json());
 
 // Set up an Express Router
 var router = express.Router();
