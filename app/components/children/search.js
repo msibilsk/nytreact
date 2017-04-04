@@ -39,28 +39,28 @@ class Search extends Component {
 	render(){
 		return (
 
-			  <div className="panel panel-default">
-  				<div className="panel-heading">
-    			  <h3 className="panel-title text-center">Search</h3>
-  				</div>
-  				<div className="panel-body">
-			      <form onSubmit={(event) => {event.preventDefault(); this.handleSubmit();}}>
-			  	    <div className="form-group">
-			          <label htmlFor="topic">Topic</label>
-			          <input value={this.state.query} onChange={this.handleTopicChange} className="form-control" id="topic" placeholder="E.g. Cats" />
-			        </div>
-			        <div className="form-group">
-			          <label htmlFor="start-year">Start Year</label>
-			          <input value={this.state.startDate} onChange={this.handleStartDateChange} className="form-control" id="start-year" placeholder="YYYY" />
-			        </div>
-			        <div className="form-group">
-			          <label htmlFor="end-year">End Year</label>
-			          <input value={this.state.endDate} onChange={this.handleEndDateChange} className="form-control" id="end-year" placeholder="YYYY" />
-			        </div>
-			       	<button type="submit" className="btn btn-success">Submit</button>
-  			      </form>
-			    </div>
-			  </div>
+		  <div className="panel panel-default">
+				<div className="panel-heading">
+			  <h3 className="panel-title text-center">Search</h3>
+				</div>
+				<div className="panel-body">
+		      <form onSubmit={(event) => {event.preventDefault(); this.handleSubmit();}}>
+		  	    <div className="form-group">
+		          <label htmlFor="topic">Topic</label>
+		          <input value={this.state.query} onChange={this.handleTopicChange} className="form-control" id="topic" placeholder="E.g. Cats" />
+		        </div>
+		        <div className="form-group">
+		          <label htmlFor="start-year">Start Year</label>
+		          <input value={this.state.startDate} onChange={this.handleStartDateChange} className="form-control" id="start-year" placeholder="YYYY" />
+		        </div>
+		        <div className="form-group">
+		          <label htmlFor="end-year">End Year</label>
+		          <input value={this.state.endDate} onChange={this.handleEndDateChange} className="form-control" id="end-year" placeholder="YYYY" />
+		        </div>
+		       	<button type="submit" className="btn btn-success">Submit</button>
+			      </form>
+		    </div>
+		  </div>
 
 		)
 	}

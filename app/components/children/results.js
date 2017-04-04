@@ -8,17 +8,11 @@ class Results extends Component	{
 		this.showResults = this.showResults.bind(this);
 	}
 
-	// componentDidUpdate(){
-	// 	this.showResults();
-	// }
-
 	showResults(){
 		if(this.props.res){
-			console.log("Trying to show");
-			return this.props.res.map((x, i) => <SearchResult key={i} title={x.headline.main} abstract={x.abs} link={x.web_url} saved={false}/>);
+			return this.props.res.map((x, i) => <SearchResult key={i} title={x.headline.main} p={x.lead_paragraph} link={x.web_url} saved={false}/>);
 		}
-		console.log("Nothing to show.");
-		return "Nothing to show."
+		return "Search results will be displayed here."
 	}
 
 	render(){

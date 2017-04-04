@@ -12,8 +12,9 @@ class SearchResult extends Component {
     			<h3 className="panel-title text-center">{this.props.title}</h3>
   			  </div>
   			  <div className="panel-body">
-  			  	<p>{this.props.abstract}</p>
-  			  	<p>{this.props.link}</p>
+  			  	<p>{this.props.p}</p>
+  			  	<a href={this.props.link}>{this.props.link}</a>
+  			  	<button for={this.props.key} className="btn btn-success pull-right">Save Article</button>
   			  </div>
 			</div>
 		)
