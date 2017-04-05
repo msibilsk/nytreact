@@ -16,15 +16,19 @@ var helper = {
 
   	postArticle: function(title, link, lead_p){
   		var body = JSON.stringify({title: title, link: link, lead_p: lead_p});
-  		console.log("body of request: " + body);
-
 
 		var myInit = {
 			method: "POST",
+			headers: {
+        		'Accept': 'application/json',
+        		'Content-Type': 'application/json'
+      		},
 			body: body
 		}
 
-		var articlePostRequest = new Request("api/saved", myInit);
+		console.log(myInit);
+
+		var articlePostRequest = new Request("/api/saved", myInit);
 
   		return new Promise(function(resolve, reject){
   			fetch(articlePostRequest)

@@ -2,11 +2,16 @@ var path = require("path");
 var Article = require("../models/Article");
 
 module.exports = function(router) {
-    router.get("/", function(req, res) {
+    router.all("/", function(req, res) {
     	res.sendFile(path.join(__dirname, "/../views/index.html"));
     });
 
-    router.post("/api/saved", function(req, res){
+    // router.get("/api/saved", function(req, res){
+    // 	res.write("Hello");
+    // 	res.end();
+    // });
+
+	router.post("/api/saved", function(req, res){
     	console.log(req.method);
 	  	console.log(req.body);
     	Article.create({
@@ -26,4 +31,6 @@ module.exports = function(router) {
 		    }
 		});
 	});
+
+
 }
